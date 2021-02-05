@@ -1,0 +1,14 @@
+/.idea
+/broker-01/store
+/broker-02/store
+/broker-03/store
+
+/broker-01/rocketmqlogs
+/broker-02/rocketmqlogs
+/broker-03/rocketmqlogs
+
+/nameserver-01/rocketmqlogs
+/nameserver-01/rocketmqlogs
+
+/rocketmq-all-4.8.0-bin-release.zip
+/rocketmq-all-4.8.0-bin-release

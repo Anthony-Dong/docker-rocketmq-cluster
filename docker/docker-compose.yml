@@ -1,0 +1,84 @@
+version: "3"
+services:
+  rocketmq-console:
+    image: apacherocketmq/rocketmq-console:2.0.0
+    ports:
+      - 8080:8080
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+    environment: 
+      - JAVA_OPTS=-Drocketmq.namesrv.addr=nameserver-01:9876;nameserver-02:9876 -Xms256m -Xmx256m
+  nameserver-01:
+    image: rocketmq:v4.8.0
+    deploy:
+      resources:
+        limits:
+          memory: 256M    
+    ports:
+      - 9871:9876
+    environment:
+      - JAVA_OPT_EXT=-Xms256m -Xmx256m
+    volumes:
+      - ./nameserver-01/conf:/opt/rocketmq/conf
+      - ./nameserver-01/rocketmqlogs:/root/logs/rocketmqlogs
+    command: mqnamesrv
+  nameserver-02:
+    image: rocketmq:v4.8.0
+    deploy:
+      resources:
+        limits:
+          memory: 256M    
+    ports:
+      - 9872:9876
+    volumes: 
+      - ./nameserver-02/rocketmqlogs:/root/logs/rocketmqlogs
+    environment:
+      - JAVA_OPT_EXT=-Xms256m -Xmx256m
+    command: mqnamesrv
+  broker-01:
+    image: rocketmq:v4.8.0
+    deploy:
+      resources:
+        limits:
+          memory: 512M    
+    volumes:
+      - ./broker-01/store:/root/store
+      - ./broker-01/rocketmqlogs:/root/logs/rocketmqlogs
+      - ./broker-01/conf:/opt/rocketmq/conf
+    environment:
+      - JAVA_OPT_EXT=-Xms256m -Xmx256m 
+    ports: 
+      - 10911:10911
+    command: mqbroker -c conf/broker.conf
+  broker-02:
+    image: rocketmq:v4.8.0
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+    volumes:
+      - ./broker-02/store:/root/store
+      - ./broker-02/rocketmqlogs:/root/logs/rocketmqlogs
+      - ./broker-02/conf:/opt/rocketmq/conf
+    environment:
+      - JAVA_OPT_EXT=-Xms256m -Xmx256m
+    ports: 
+      - 10912:10912      
+    command: mqbroker -c conf/broker.conf
+  broker-03:
+    image: rocketmq:v4.8.0
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+    volumes:
+      - ./broker-03/store:/root/store
+      - ./broker-03/rocketmqlogs:/root/logs/rocketmqlogs
+      - ./broker-03/conf:/opt/rocketmq/conf
+    environment:
+      - JAVA_OPT_EXT=-Xms256m -Xmx256m
+    ports: 
+      - 10913:10913
+    command: mqbroker -c conf/broker.conf    

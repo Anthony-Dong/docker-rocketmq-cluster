@@ -1,0 +1,760 @@
+2021-02-05 14:34:33 INFO main - rocketmqHome=/opt/rocketmq
+2021-02-05 14:34:33 INFO main - kvConfigPath=/root/namesrv/kvConfig.json
+2021-02-05 14:34:33 INFO main - configStorePath=/root/namesrv/namesrv.properties
+2021-02-05 14:34:33 INFO main - productEnvName=center
+2021-02-05 14:34:33 INFO main - clusterTest=false
+2021-02-05 14:34:33 INFO main - orderMessageEnable=false
+2021-02-05 14:34:33 INFO main - listenPort=9876
+2021-02-05 14:34:33 INFO main - serverWorkerThreads=8
+2021-02-05 14:34:33 INFO main - serverCallbackExecutorThreads=0
+2021-02-05 14:34:33 INFO main - serverSelectorThreads=3
+2021-02-05 14:34:33 INFO main - serverOnewaySemaphoreValue=256
+2021-02-05 14:34:33 INFO main - serverAsyncSemaphoreValue=64
+2021-02-05 14:34:33 INFO main - serverChannelMaxIdleTimeSeconds=120
+2021-02-05 14:34:33 INFO main - serverSocketSndBufSize=65535
+2021-02-05 14:34:33 INFO main - serverSocketRcvBufSize=65535
+2021-02-05 14:34:33 INFO main - serverPooledByteBufAllocatorEnable=true
+2021-02-05 14:34:33 INFO main - useEpollNativeSelector=false
+2021-02-05 14:34:34 INFO main - Server is running in TLS permissive mode
+2021-02-05 14:34:34 INFO main - Tls config file doesn't exist, skip it
+2021-02-05 14:34:34 INFO main - Log the final used tls related configuration
+2021-02-05 14:34:34 INFO main - tls.test.mode.enable = true
+2021-02-05 14:34:34 INFO main - tls.server.need.client.auth = none
+2021-02-05 14:34:34 INFO main - tls.server.keyPath = null
+2021-02-05 14:34:34 INFO main - tls.server.keyPassword = null
+2021-02-05 14:34:34 INFO main - tls.server.certPath = null
+2021-02-05 14:34:34 INFO main - tls.server.authClient = false
+2021-02-05 14:34:34 INFO main - tls.server.trustCertPath = null
+2021-02-05 14:34:34 INFO main - tls.client.keyPath = null
+2021-02-05 14:34:34 INFO main - tls.client.keyPassword = null
+2021-02-05 14:34:34 INFO main - tls.client.certPath = null
+2021-02-05 14:34:34 INFO main - tls.client.authServer = false
+2021-02-05 14:34:34 INFO main - tls.client.trustCertPath = null
+2021-02-05 14:34:35 INFO main - Using OpenSSL provider
+2021-02-05 14:34:35 INFO main - SSLContext created for server
+2021-02-05 14:34:36 INFO NettyEventExecutor - NettyEventExecutor service started
+2021-02-05 14:34:36 INFO main - Try to start service thread:FileWatchService started:false lastThread:null
+2021-02-05 14:34:36 INFO main - The Name Server boot success. serializeType=JSON
+2021-02-05 14:34:36 INFO FileWatchService - FileWatchService service started
+2021-02-05 14:34:37 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.7:48322
+2021-02-05 14:34:37 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.7:48322]
+2021-02-05 14:34:37 INFO RemotingExecutorThread_1 - new broker registered, 172.15.64.10:10912 HAServer: 172.27.0.7:10913
+2021-02-05 14:34:37 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.5:47642
+2021-02-05 14:34:37 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.5:47642]
+2021-02-05 14:34:37 INFO RemotingExecutorThread_3 - new topic registered, RaftCluster_REPLY_TOPIC QueueData [brokerName=RaftNode00, readQueueNums=1, writeQueueNums=1, perm=6, topicSynFlag=0]
+2021-02-05 14:34:37 INFO RemotingExecutorThread_3 - new topic registered, SCHEDULE_TOPIC_XXXX QueueData [brokerName=RaftNode00, readQueueNums=18, writeQueueNums=18, perm=6, topicSynFlag=0]
+2021-02-05 14:34:37 INFO RemotingExecutorThread_3 - new topic registered, RaftCluster QueueData [brokerName=RaftNode00, readQueueNums=16, writeQueueNums=16, perm=7, topicSynFlag=0]
+2021-02-05 14:34:37 INFO RemotingExecutorThread_3 - new topic registered, BenchmarkTest QueueData [brokerName=RaftNode00, readQueueNums=1024, writeQueueNums=1024, perm=6, topicSynFlag=0]
+2021-02-05 14:34:37 INFO RemotingExecutorThread_3 - new topic registered, OFFSET_MOVED_EVENT QueueData [brokerName=RaftNode00, readQueueNums=1, writeQueueNums=1, perm=6, topicSynFlag=0]
+2021-02-05 14:34:37 INFO RemotingExecutorThread_3 - new topic registered, RaftNode00 QueueData [brokerName=RaftNode00, readQueueNums=1, writeQueueNums=1, perm=7, topicSynFlag=0]
+2021-02-05 14:34:37 INFO RemotingExecutorThread_3 - new topic registered, TBW102 QueueData [brokerName=RaftNode00, readQueueNums=8, writeQueueNums=8, perm=7, topicSynFlag=0]
+2021-02-05 14:34:37 INFO RemotingExecutorThread_3 - new topic registered, SELF_TEST_TOPIC QueueData [brokerName=RaftNode00, readQueueNums=1, writeQueueNums=1, perm=6, topicSynFlag=0]
+2021-02-05 14:34:37 INFO RemotingExecutorThread_3 - new broker registered, 172.15.64.10:10911 HAServer: 172.27.0.5:10912
+2021-02-05 14:34:37 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.2:45972
+2021-02-05 14:34:37 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.2:45972]
+2021-02-05 14:34:37 INFO RemotingExecutorThread_4 - new broker registered, 172.15.64.10:10913 HAServer: 172.27.0.2:10914
+2021-02-05 14:35:00 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35426
+2021-02-05 14:35:00 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35426]
+2021-02-05 14:35:00 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35426]
+2021-02-05 14:35:00 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35426]
+2021-02-05 14:35:01 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35446
+2021-02-05 14:35:01 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35446]
+2021-02-05 14:35:01 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35446]
+2021-02-05 14:35:01 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35446]
+2021-02-05 14:35:29 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35456
+2021-02-05 14:35:29 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35456]
+2021-02-05 14:35:30 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35456]
+2021-02-05 14:35:30 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35456]
+2021-02-05 14:35:35 INFO NSScheduledThread1 - --------------------------------------------------------
+2021-02-05 14:35:35 INFO NSScheduledThread1 - configTable SIZE: 0
+2021-02-05 14:35:37 INFO RemotingExecutorThread_8 - new topic registered, RMQ_SYS_TRANS_HALF_TOPIC QueueData [brokerName=RaftNode00, readQueueNums=1, writeQueueNums=1, perm=6, topicSynFlag=0]
+2021-02-05 14:35:49 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35478
+2021-02-05 14:35:49 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35478]
+2021-02-05 14:35:49 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35478]
+2021-02-05 14:35:49 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35478]
+2021-02-05 14:35:49 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35484
+2021-02-05 14:35:49 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35484]
+2021-02-05 14:35:49 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35484]
+2021-02-05 14:35:49 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35484]
+2021-02-05 14:35:49 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35492
+2021-02-05 14:35:49 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35492]
+2021-02-05 14:35:49 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35492]
+2021-02-05 14:35:49 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35492]
+2021-02-05 14:35:49 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35504
+2021-02-05 14:35:49 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35504]
+2021-02-05 14:35:49 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35504]
+2021-02-05 14:35:49 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35504]
+2021-02-05 14:35:52 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35520
+2021-02-05 14:35:52 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35520]
+2021-02-05 14:35:52 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35520]
+2021-02-05 14:35:52 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35520]
+2021-02-05 14:35:52 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35526
+2021-02-05 14:35:52 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35526]
+2021-02-05 14:35:52 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35526]
+2021-02-05 14:35:52 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35526]
+2021-02-05 14:35:52 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35544
+2021-02-05 14:35:52 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35544]
+2021-02-05 14:35:52 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35544]
+2021-02-05 14:35:52 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35544]
+2021-02-05 14:35:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35554
+2021-02-05 14:35:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35554]
+2021-02-05 14:35:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35554]
+2021-02-05 14:35:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35554]
+2021-02-05 14:35:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35564
+2021-02-05 14:35:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35564]
+2021-02-05 14:35:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35564]
+2021-02-05 14:35:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35564]
+2021-02-05 14:36:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35570
+2021-02-05 14:36:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35570]
+2021-02-05 14:36:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35570]
+2021-02-05 14:36:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35570]
+2021-02-05 14:37:00 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35620
+2021-02-05 14:37:00 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35620]
+2021-02-05 14:37:00 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35620]
+2021-02-05 14:37:00 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35620]
+2021-02-05 14:37:14 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.7:48582
+2021-02-05 14:37:14 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.7:48582]
+2021-02-05 14:37:15 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.7:48582]
+2021-02-05 14:37:15 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.7:48582]
+2021-02-05 14:37:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35696
+2021-02-05 14:37:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35696]
+2021-02-05 14:37:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35696]
+2021-02-05 14:37:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35696]
+2021-02-05 14:38:00 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35702
+2021-02-05 14:38:00 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35702]
+2021-02-05 14:38:00 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35702]
+2021-02-05 14:38:00 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35702]
+2021-02-05 14:38:29 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35736
+2021-02-05 14:38:29 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35736]
+2021-02-05 14:38:30 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35736]
+2021-02-05 14:38:30 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35736]
+2021-02-05 14:38:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35762
+2021-02-05 14:38:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35762]
+2021-02-05 14:38:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35762]
+2021-02-05 14:38:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35762]
+2021-02-05 14:39:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35824
+2021-02-05 14:39:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35824]
+2021-02-05 14:40:00 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35824]
+2021-02-05 14:40:00 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35824]
+2021-02-05 14:40:29 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35866
+2021-02-05 14:40:29 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35866]
+2021-02-05 14:40:30 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35866]
+2021-02-05 14:40:30 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35866]
+2021-02-05 14:40:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35892
+2021-02-05 14:40:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35892]
+2021-02-05 14:40:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35892]
+2021-02-05 14:40:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35892]
+2021-02-05 14:40:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35898
+2021-02-05 14:40:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35898]
+2021-02-05 14:40:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35898]
+2021-02-05 14:40:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35898]
+2021-02-05 14:41:29 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35932
+2021-02-05 14:41:29 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35932]
+2021-02-05 14:41:30 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35932]
+2021-02-05 14:41:30 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35932]
+2021-02-05 14:41:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35958
+2021-02-05 14:41:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35958]
+2021-02-05 14:41:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35958]
+2021-02-05 14:41:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35958]
+2021-02-05 14:42:00 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:35982
+2021-02-05 14:42:00 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:35982]
+2021-02-05 14:42:00 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:35982]
+2021-02-05 14:42:00 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:35982]
+2021-02-05 14:42:29 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36006
+2021-02-05 14:42:29 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36006]
+2021-02-05 14:42:30 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36006]
+2021-02-05 14:42:30 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36006]
+2021-02-05 14:42:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36032
+2021-02-05 14:42:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36032]
+2021-02-05 14:42:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36032]
+2021-02-05 14:42:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36032]
+2021-02-05 14:43:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36084
+2021-02-05 14:43:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36084]
+2021-02-05 14:43:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36084]
+2021-02-05 14:43:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36084]
+2021-02-05 14:43:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36090
+2021-02-05 14:43:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36090]
+2021-02-05 14:44:00 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36090]
+2021-02-05 14:44:00 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36090]
+2021-02-05 14:44:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36148
+2021-02-05 14:44:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36148]
+2021-02-05 14:44:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36148]
+2021-02-05 14:44:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36148]
+2021-02-05 14:45:35 INFO NSScheduledThread1 - --------------------------------------------------------
+2021-02-05 14:45:35 INFO NSScheduledThread1 - configTable SIZE: 0
+2021-02-05 14:45:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36224
+2021-02-05 14:45:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36224]
+2021-02-05 14:45:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36224]
+2021-02-05 14:45:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36224]
+2021-02-05 14:46:00 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36248
+2021-02-05 14:46:00 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36248]
+2021-02-05 14:46:00 WARN NettyServerCodecThread_4 - NETTY SERVER PIPELINE: exceptionCaught 172.27.0.3:36248
+2021-02-05 14:46:00 WARN NettyServerCodecThread_4 - NETTY SERVER PIPELINE: exceptionCaught exception.
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method) ~[na:1.8.0_275]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39) ~[na:1.8.0_275]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_275]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_275]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379) ~[na:1.8.0_275]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:221) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:899) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:275) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:652) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:575) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:489) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:451) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140) [netty-all-4.0.42.Final.jar:4.0.42.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_275]
+2021-02-05 14:46:00 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36248]
+2021-02-05 14:46:00 INFO NettyServerNIOSelector_3_3 - closeChannel: close the connection to remote address[172.27.0.3:36248] result: true
+2021-02-05 14:46:00 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36248]
+2021-02-05 14:46:29 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36262
+2021-02-05 14:46:29 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36262]
+2021-02-05 14:46:30 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36262]
+2021-02-05 14:46:30 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36262]
+2021-02-05 14:46:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36288
+2021-02-05 14:46:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36288]
+2021-02-05 14:46:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36288]
+2021-02-05 14:46:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36288]
+2021-02-05 14:47:29 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36334
+2021-02-05 14:47:29 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36334]
+2021-02-05 14:47:30 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36334]
+2021-02-05 14:47:30 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36334]
+2021-02-05 14:48:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36386
+2021-02-05 14:48:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36386]
+2021-02-05 14:48:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36386]
+2021-02-05 14:48:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36386]
+2021-02-05 14:48:29 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36408
+2021-02-05 14:48:29 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36408]
+2021-02-05 14:48:30 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36408]
+2021-02-05 14:48:30 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36408]
+2021-02-05 14:49:00 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36448
+2021-02-05 14:49:00 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36448]
+2021-02-05 14:49:00 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36448]
+2021-02-05 14:49:00 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36448]
+2021-02-05 14:50:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36522
+2021-02-05 14:50:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36522]
+2021-02-05 14:50:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36522]
+2021-02-05 14:50:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36522]
+2021-02-05 14:50:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36568
+2021-02-05 14:50:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36568]
+2021-02-05 14:50:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36568]
+2021-02-05 14:50:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36568]
+2021-02-05 14:51:00 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36588
+2021-02-05 14:51:00 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36588]
+2021-02-05 14:51:00 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36588]
+2021-02-05 14:51:00 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36588]
+2021-02-05 14:53:29 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36716
+2021-02-05 14:53:29 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36716]
+2021-02-05 14:53:30 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36716]
+2021-02-05 14:53:30 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36716]
+2021-02-05 14:53:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36742
+2021-02-05 14:53:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36742]
+2021-02-05 14:53:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36742]
+2021-02-05 14:53:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36742]
+2021-02-05 14:55:29 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36862
+2021-02-05 14:55:29 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36862]
+2021-02-05 14:55:30 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36862]
+2021-02-05 14:55:30 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36862]
+2021-02-05 14:55:34 INFO NSScheduledThread1 - --------------------------------------------------------
+2021-02-05 14:55:34 INFO NSScheduledThread1 - configTable SIZE: 0
+2021-02-05 14:55:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36888
+2021-02-05 14:55:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36888]
+2021-02-05 14:55:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36888]
+2021-02-05 14:55:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36888]
+2021-02-05 14:56:00 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36912
+2021-02-05 14:56:00 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36912]
+2021-02-05 14:56:00 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36912]
+2021-02-05 14:56:00 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36912]
+2021-02-05 14:56:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36966
+2021-02-05 14:56:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36966]
+2021-02-05 14:56:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36966]
+2021-02-05 14:56:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36966]
+2021-02-05 14:57:29 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:36988
+2021-02-05 14:57:29 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:36988]
+2021-02-05 14:57:30 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:36988]
+2021-02-05 14:57:30 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:36988]
+2021-02-05 14:57:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37014
+2021-02-05 14:57:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37014]
+2021-02-05 14:57:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37014]
+2021-02-05 14:57:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37014]
+2021-02-05 14:58:00 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37038
+2021-02-05 14:58:00 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37038]
+2021-02-05 14:58:00 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37038]
+2021-02-05 14:58:00 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37038]
+2021-02-05 14:59:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37136
+2021-02-05 14:59:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37136]
+2021-02-05 14:59:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37136]
+2021-02-05 14:59:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37136]
+2021-02-05 15:00:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37146
+2021-02-05 15:00:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37146]
+2021-02-05 15:00:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37146]
+2021-02-05 15:00:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37146]
+2021-02-05 15:00:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37192
+2021-02-05 15:00:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37192]
+2021-02-05 15:00:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37192]
+2021-02-05 15:00:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37192]
+2021-02-05 15:01:00 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37198
+2021-02-05 15:01:00 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37198]
+2021-02-05 15:01:00 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37198]
+2021-02-05 15:01:00 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37198]
+2021-02-05 15:01:29 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37226
+2021-02-05 15:01:29 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37226]
+2021-02-05 15:01:30 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37226]
+2021-02-05 15:01:30 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37226]
+2021-02-05 15:01:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37252
+2021-02-05 15:01:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37252]
+2021-02-05 15:01:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37252]
+2021-02-05 15:01:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37252]
+2021-02-05 15:01:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37262
+2021-02-05 15:01:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37262]
+2021-02-05 15:02:00 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37262]
+2021-02-05 15:02:00 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37262]
+2021-02-05 15:02:29 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37288
+2021-02-05 15:02:29 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37288]
+2021-02-05 15:02:30 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37288]
+2021-02-05 15:02:30 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37288]
+2021-02-05 15:02:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37314
+2021-02-05 15:02:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37314]
+2021-02-05 15:02:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37314]
+2021-02-05 15:02:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37314]
+2021-02-05 15:03:29 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37350
+2021-02-05 15:03:29 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37350]
+2021-02-05 15:03:30 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37350]
+2021-02-05 15:03:30 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37350]
+2021-02-05 15:04:29 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37414
+2021-02-05 15:04:29 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37414]
+2021-02-05 15:04:30 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37414]
+2021-02-05 15:04:30 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37414]
+2021-02-05 15:04:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37440
+2021-02-05 15:04:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37440]
+2021-02-05 15:04:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37440]
+2021-02-05 15:04:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37440]
+2021-02-05 15:04:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37446
+2021-02-05 15:04:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37446]
+2021-02-05 15:05:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37446]
+2021-02-05 15:05:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37446]
+2021-02-05 15:05:29 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37476
+2021-02-05 15:05:29 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37476]
+2021-02-05 15:05:30 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37476]
+2021-02-05 15:05:30 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37476]
+2021-02-05 15:05:33 INFO NSScheduledThread1 - --------------------------------------------------------
+2021-02-05 15:05:33 INFO NSScheduledThread1 - configTable SIZE: 0
+2021-02-05 15:05:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37508
+2021-02-05 15:05:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37508]
+2021-02-05 15:05:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37508]
+2021-02-05 15:05:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37508]
+2021-02-05 15:06:00 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37520
+2021-02-05 15:06:00 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37520]
+2021-02-05 15:06:00 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37520]
+2021-02-05 15:06:00 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37520]
+2021-02-05 15:06:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37568
+2021-02-05 15:06:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37568]
+2021-02-05 15:06:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37568]
+2021-02-05 15:06:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37568]
+2021-02-05 15:06:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37574
+2021-02-05 15:06:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37574]
+2021-02-05 15:07:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37574]
+2021-02-05 15:07:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37574]
+2021-02-05 15:07:29 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37604
+2021-02-05 15:07:29 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37604]
+2021-02-05 15:07:30 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37604]
+2021-02-05 15:07:30 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37604]
+2021-02-05 15:07:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37630
+2021-02-05 15:07:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37630]
+2021-02-05 15:07:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37630]
+2021-02-05 15:07:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37630]
+2021-02-05 15:07:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37636
+2021-02-05 15:07:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37636]
+2021-02-05 15:08:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37636]
+2021-02-05 15:08:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37636]
+2021-02-05 15:08:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37692
+2021-02-05 15:08:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37692]
+2021-02-05 15:08:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37692]
+2021-02-05 15:08:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37692]
+2021-02-05 15:10:00 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37770
+2021-02-05 15:10:00 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37770]
+2021-02-05 15:10:00 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37770]
+2021-02-05 15:10:00 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37770]
+2021-02-05 15:10:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37824
+2021-02-05 15:10:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37824]
+2021-02-05 15:11:00 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37824]
+2021-02-05 15:11:00 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37824]
+2021-02-05 15:11:29 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37856
+2021-02-05 15:11:29 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37856]
+2021-02-05 15:11:30 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37856]
+2021-02-05 15:11:30 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37856]
+2021-02-05 15:11:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37882
+2021-02-05 15:11:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37882]
+2021-02-05 15:11:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37882]
+2021-02-05 15:11:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37882]
+2021-02-05 15:12:29 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37908
+2021-02-05 15:12:29 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37908]
+2021-02-05 15:12:30 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37908]
+2021-02-05 15:12:30 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37908]
+2021-02-05 15:12:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37934
+2021-02-05 15:12:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37934]
+2021-02-05 15:12:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37934]
+2021-02-05 15:12:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37934]
+2021-02-05 15:12:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37940
+2021-02-05 15:12:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37940]
+2021-02-05 15:13:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37940]
+2021-02-05 15:13:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37940]
+2021-02-05 15:13:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:37996
+2021-02-05 15:13:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:37996]
+2021-02-05 15:13:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:37996]
+2021-02-05 15:13:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:37996]
+2021-02-05 15:14:29 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38042
+2021-02-05 15:14:29 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38042]
+2021-02-05 15:14:30 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38042]
+2021-02-05 15:14:30 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38042]
+2021-02-05 15:14:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38068
+2021-02-05 15:14:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38068]
+2021-02-05 15:14:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38068]
+2021-02-05 15:14:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38068]
+2021-02-05 15:15:29 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38094
+2021-02-05 15:15:29 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38094]
+2021-02-05 15:15:30 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38094]
+2021-02-05 15:15:30 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38094]
+2021-02-05 15:15:32 INFO NSScheduledThread1 - --------------------------------------------------------
+2021-02-05 15:15:32 INFO NSScheduledThread1 - configTable SIZE: 0
+2021-02-05 15:15:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38120
+2021-02-05 15:15:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38120]
+2021-02-05 15:15:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38120]
+2021-02-05 15:15:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38120]
+2021-02-05 15:16:00 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38132
+2021-02-05 15:16:00 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38132]
+2021-02-05 15:16:00 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38132]
+2021-02-05 15:16:00 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38132]
+2021-02-05 15:16:29 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38158
+2021-02-05 15:16:29 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38158]
+2021-02-05 15:16:30 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38158]
+2021-02-05 15:16:30 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38158]
+2021-02-05 15:16:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38194
+2021-02-05 15:16:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38194]
+2021-02-05 15:17:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38194]
+2021-02-05 15:17:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38194]
+2021-02-05 15:17:00 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38208
+2021-02-05 15:17:00 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38208]
+2021-02-05 15:17:00 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38208]
+2021-02-05 15:17:00 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38208]
+2021-02-05 15:17:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38258
+2021-02-05 15:17:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38258]
+2021-02-05 15:17:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38258]
+2021-02-05 15:17:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38258]
+2021-02-05 15:18:29 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38276
+2021-02-05 15:18:29 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38276]
+2021-02-05 15:18:30 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38276]
+2021-02-05 15:18:30 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38276]
+2021-02-05 15:19:00 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38318
+2021-02-05 15:19:00 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38318]
+2021-02-05 15:19:00 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38318]
+2021-02-05 15:19:00 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38318]
+2021-02-05 15:20:29 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38404
+2021-02-05 15:20:29 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38404]
+2021-02-05 15:20:30 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38404]
+2021-02-05 15:20:30 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38404]
+2021-02-05 15:20:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38430
+2021-02-05 15:20:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38430]
+2021-02-05 15:20:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38430]
+2021-02-05 15:20:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38430]
+2021-02-05 15:21:00 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38448
+2021-02-05 15:21:00 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38448]
+2021-02-05 15:21:00 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38448]
+2021-02-05 15:21:00 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38448]
+2021-02-05 15:21:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38462
+2021-02-05 15:21:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38462]
+2021-02-05 15:21:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38462]
+2021-02-05 15:21:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38462]
+2021-02-05 15:21:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38514
+2021-02-05 15:21:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38514]
+2021-02-05 15:21:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38514]
+2021-02-05 15:21:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38514]
+2021-02-05 15:22:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38578
+2021-02-05 15:22:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38578]
+2021-02-05 15:22:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38578]
+2021-02-05 15:22:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38578]
+2021-02-05 15:22:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38592
+2021-02-05 15:22:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38592]
+2021-02-05 15:23:00 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38592]
+2021-02-05 15:23:00 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38592]
+2021-02-05 15:23:29 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38614
+2021-02-05 15:23:29 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38614]
+2021-02-05 15:23:30 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38614]
+2021-02-05 15:23:30 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38614]
+2021-02-05 15:24:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38694
+2021-02-05 15:24:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38694]
+2021-02-05 15:24:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38694]
+2021-02-05 15:24:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38694]
+2021-02-05 15:25:32 INFO NSScheduledThread1 - --------------------------------------------------------
+2021-02-05 15:25:32 INFO NSScheduledThread1 - configTable SIZE: 0
+2021-02-05 15:26:29 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38784
+2021-02-05 15:26:29 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38784]
+2021-02-05 15:26:30 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38784]
+2021-02-05 15:26:30 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38784]
+2021-02-05 15:27:00 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38820
+2021-02-05 15:27:00 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38820]
+2021-02-05 15:27:00 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38820]
+2021-02-05 15:27:00 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38820]
+2021-02-05 15:27:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38826
+2021-02-05 15:27:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38826]
+2021-02-05 15:27:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38826]
+2021-02-05 15:27:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38826]
+2021-02-05 15:27:47 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38874
+2021-02-05 15:27:47 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38874]
+2021-02-05 15:27:47 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38874]
+2021-02-05 15:27:47 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38874]
+2021-02-05 15:27:47 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38880
+2021-02-05 15:27:47 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38880]
+2021-02-05 15:27:47 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38880]
+2021-02-05 15:27:47 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38880]
+2021-02-05 15:27:47 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38896
+2021-02-05 15:27:47 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38896]
+2021-02-05 15:27:47 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38896]
+2021-02-05 15:27:47 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38896]
+2021-02-05 15:27:48 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38902
+2021-02-05 15:27:48 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38902]
+2021-02-05 15:27:48 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38902]
+2021-02-05 15:27:48 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38902]
+2021-02-05 15:27:50 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38904
+2021-02-05 15:27:50 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38904]
+2021-02-05 15:27:50 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38904]
+2021-02-05 15:27:50 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38904]
+2021-02-05 15:27:52 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38906
+2021-02-05 15:27:52 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38906]
+2021-02-05 15:27:52 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38906]
+2021-02-05 15:27:52 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38906]
+2021-02-05 15:27:52 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38918
+2021-02-05 15:27:52 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38918]
+2021-02-05 15:27:52 WARN NettyServerCodecThread_2 - NETTY SERVER PIPELINE: exceptionCaught 172.27.0.3:38918
+2021-02-05 15:27:52 WARN NettyServerCodecThread_2 - NETTY SERVER PIPELINE: exceptionCaught exception.
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method) ~[na:1.8.0_275]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39) ~[na:1.8.0_275]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_275]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_275]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379) ~[na:1.8.0_275]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:221) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:899) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:275) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:652) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:575) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:489) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:451) ~[netty-all-4.0.42.Final.jar:4.0.42.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140) [netty-all-4.0.42.Final.jar:4.0.42.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_275]
+2021-02-05 15:27:52 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38918]
+2021-02-05 15:27:52 INFO NettyServerNIOSelector_3_3 - closeChannel: close the connection to remote address[172.27.0.3:38918] result: true
+2021-02-05 15:27:52 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38918]
+2021-02-05 15:27:52 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38924
+2021-02-05 15:27:52 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38924]
+2021-02-05 15:27:52 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38924]
+2021-02-05 15:27:52 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38924]
+2021-02-05 15:27:55 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38934
+2021-02-05 15:27:55 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38934]
+2021-02-05 15:27:55 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38934]
+2021-02-05 15:27:55 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38934]
+2021-02-05 15:27:55 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38940
+2021-02-05 15:27:55 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38940]
+2021-02-05 15:27:55 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38940]
+2021-02-05 15:27:55 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38940]
+2021-02-05 15:27:55 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38946
+2021-02-05 15:27:55 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38946]
+2021-02-05 15:27:55 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38946]
+2021-02-05 15:27:55 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38946]
+2021-02-05 15:27:55 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38952
+2021-02-05 15:27:55 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38952]
+2021-02-05 15:27:55 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38952]
+2021-02-05 15:27:55 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38952]
+2021-02-05 15:27:58 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38958
+2021-02-05 15:27:58 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38958]
+2021-02-05 15:27:58 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38958]
+2021-02-05 15:27:58 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38958]
+2021-02-05 15:27:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38960
+2021-02-05 15:27:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38960]
+2021-02-05 15:27:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38960]
+2021-02-05 15:27:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38960]
+2021-02-05 15:28:01 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:38976
+2021-02-05 15:28:01 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:38976]
+2021-02-05 15:28:01 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:38976]
+2021-02-05 15:28:01 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:38976]
+2021-02-05 15:28:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39016
+2021-02-05 15:28:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39016]
+2021-02-05 15:28:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39016]
+2021-02-05 15:28:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39016]
+2021-02-05 15:28:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39026
+2021-02-05 15:28:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39026]
+2021-02-05 15:29:00 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39026]
+2021-02-05 15:29:00 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39026]
+2021-02-05 15:29:29 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39052
+2021-02-05 15:29:29 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39052]
+2021-02-05 15:29:30 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39052]
+2021-02-05 15:29:30 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39052]
+2021-02-05 15:29:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39078
+2021-02-05 15:29:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39078]
+2021-02-05 15:29:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39078]
+2021-02-05 15:29:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39078]
+2021-02-05 15:29:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39088
+2021-02-05 15:29:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39088]
+2021-02-05 15:30:00 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39088]
+2021-02-05 15:30:00 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39088]
+2021-02-05 15:30:29 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39114
+2021-02-05 15:30:29 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39114]
+2021-02-05 15:30:30 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39114]
+2021-02-05 15:30:30 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39114]
+2021-02-05 15:30:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39140
+2021-02-05 15:30:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39140]
+2021-02-05 15:30:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39140]
+2021-02-05 15:30:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39140]
+2021-02-05 15:31:29 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39178
+2021-02-05 15:31:29 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39178]
+2021-02-05 15:31:30 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39178]
+2021-02-05 15:31:30 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39178]
+2021-02-05 15:31:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39210
+2021-02-05 15:31:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39210]
+2021-02-05 15:32:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39210]
+2021-02-05 15:32:00 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39210]
+2021-02-05 15:32:29 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39240
+2021-02-05 15:32:29 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39240]
+2021-02-05 15:32:30 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39240]
+2021-02-05 15:32:30 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39240]
+2021-02-05 15:32:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39266
+2021-02-05 15:32:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39266]
+2021-02-05 15:32:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39266]
+2021-02-05 15:32:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39266]
+2021-02-05 15:34:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39388
+2021-02-05 15:34:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39388]
+2021-02-05 15:35:00 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39388]
+2021-02-05 15:35:00 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39388]
+2021-02-05 15:35:31 INFO NSScheduledThread1 - --------------------------------------------------------
+2021-02-05 15:35:31 INFO NSScheduledThread1 - configTable SIZE: 0
+2021-02-05 15:36:29 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39470
+2021-02-05 15:36:29 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39470]
+2021-02-05 15:36:30 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39470]
+2021-02-05 15:36:30 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39470]
+2021-02-05 15:37:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39510
+2021-02-05 15:37:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39510]
+2021-02-05 15:37:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39510]
+2021-02-05 15:37:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39510]
+2021-02-05 15:37:29 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39532
+2021-02-05 15:37:29 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39532]
+2021-02-05 15:37:30 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39532]
+2021-02-05 15:37:30 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39532]
+2021-02-05 15:38:29 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39594
+2021-02-05 15:38:29 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39594]
+2021-02-05 15:38:30 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39594]
+2021-02-05 15:38:30 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39594]
+2021-02-05 15:38:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39620
+2021-02-05 15:38:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39620]
+2021-02-05 15:38:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39620]
+2021-02-05 15:38:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39620]
+2021-02-05 15:39:29 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39656
+2021-02-05 15:39:29 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39656]
+2021-02-05 15:39:30 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39656]
+2021-02-05 15:39:30 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39656]
+2021-02-05 15:39:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39682
+2021-02-05 15:39:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39682]
+2021-02-05 15:39:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39682]
+2021-02-05 15:39:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39682]
+2021-02-05 15:40:29 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39718
+2021-02-05 15:40:29 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39718]
+2021-02-05 15:40:30 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39718]
+2021-02-05 15:40:30 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39718]
+2021-02-05 15:44:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:39988
+2021-02-05 15:44:59 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:39988]
+2021-02-05 15:45:00 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:39988]
+2021-02-05 15:45:00 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:39988]
+2021-02-05 15:45:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40002
+2021-02-05 15:45:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40002]
+2021-02-05 15:45:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40002]
+2021-02-05 15:45:00 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40002]
+2021-02-05 15:45:29 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40038
+2021-02-05 15:45:29 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40038]
+2021-02-05 15:45:30 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40038]
+2021-02-05 15:45:30 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40038]
+2021-02-05 15:45:30 INFO NSScheduledThread1 - --------------------------------------------------------
+2021-02-05 15:45:30 INFO NSScheduledThread1 - configTable SIZE: 0
+2021-02-05 15:45:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40064
+2021-02-05 15:45:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40064]
+2021-02-05 15:45:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40064]
+2021-02-05 15:45:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40064]
+2021-02-05 15:46:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40126
+2021-02-05 15:46:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40126]
+2021-02-05 15:46:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40126]
+2021-02-05 15:46:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40126]
+2021-02-05 15:47:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40188
+2021-02-05 15:47:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40188]
+2021-02-05 15:47:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40188]
+2021-02-05 15:47:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40188]
+2021-02-05 15:47:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40194
+2021-02-05 15:47:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40194]
+2021-02-05 15:48:00 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40194]
+2021-02-05 15:48:00 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40194]
+2021-02-05 15:48:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40250
+2021-02-05 15:48:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40250]
+2021-02-05 15:48:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40250]
+2021-02-05 15:48:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40250]
+2021-02-05 15:49:00 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40270
+2021-02-05 15:49:00 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40270]
+2021-02-05 15:49:00 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40270]
+2021-02-05 15:49:00 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40270]
+2021-02-05 15:51:29 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40410
+2021-02-05 15:51:29 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40410]
+2021-02-05 15:51:30 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40410]
+2021-02-05 15:51:30 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40410]
+2021-02-05 15:51:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40436
+2021-02-05 15:51:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40436]
+2021-02-05 15:51:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40436]
+2021-02-05 15:51:59 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40436]
+2021-02-05 15:52:29 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40472
+2021-02-05 15:52:29 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40472]
+2021-02-05 15:52:30 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40472]
+2021-02-05 15:52:30 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40472]
+2021-02-05 15:52:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40498
+2021-02-05 15:52:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40498]
+2021-02-05 15:52:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40498]
+2021-02-05 15:52:59 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40498]
+2021-02-05 15:53:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40574
+2021-02-05 15:53:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40574]
+2021-02-05 15:53:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40574]
+2021-02-05 15:53:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40574]
+2021-02-05 15:54:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40614
+2021-02-05 15:54:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40614]
+2021-02-05 15:54:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40614]
+2021-02-05 15:54:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40614]
+2021-02-05 15:54:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40624
+2021-02-05 15:54:59 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40624]
+2021-02-05 15:55:00 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40624]
+2021-02-05 15:55:00 INFO NettyServerCodecThread_6 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40624]
+2021-02-05 15:55:29 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40650
+2021-02-05 15:55:29 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40650]
+2021-02-05 15:55:30 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40650]
+2021-02-05 15:55:30 INFO NettyServerCodecThread_7 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40650]
+2021-02-05 15:55:30 INFO NSScheduledThread1 - --------------------------------------------------------
+2021-02-05 15:55:30 INFO NSScheduledThread1 - configTable SIZE: 0
+2021-02-05 15:55:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40676
+2021-02-05 15:55:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40676]
+2021-02-05 15:55:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40676]
+2021-02-05 15:55:59 INFO NettyServerCodecThread_8 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40676]
+2021-02-05 15:56:00 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40702
+2021-02-05 15:56:00 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40702]
+2021-02-05 15:56:00 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40702]
+2021-02-05 15:56:00 INFO NettyServerCodecThread_1 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40702]
+2021-02-05 15:56:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40742
+2021-02-05 15:56:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40742]
+2021-02-05 15:56:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40742]
+2021-02-05 15:56:59 INFO NettyServerCodecThread_2 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40742]
+2021-02-05 15:57:29 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40778
+2021-02-05 15:57:29 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40778]
+2021-02-05 15:57:30 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40778]
+2021-02-05 15:57:30 INFO NettyServerCodecThread_3 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40778]
+2021-02-05 15:57:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40804
+2021-02-05 15:57:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40804]
+2021-02-05 15:57:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40804]
+2021-02-05 15:57:59 INFO NettyServerCodecThread_4 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40804]
+2021-02-05 15:57:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelRegistered 172.27.0.3:40814
+2021-02-05 15:57:59 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelActive, the channel[172.27.0.3:40814]
+2021-02-05 15:58:00 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelInactive, the channel[172.27.0.3:40814]
+2021-02-05 15:58:00 INFO NettyServerCodecThread_5 - NETTY SERVER PIPELINE: channelUnregistered, the channel[172.27.0.3:40814]
