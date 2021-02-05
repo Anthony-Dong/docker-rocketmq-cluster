@@ -1,10 +1,12 @@
-## 1、版本：
+## 1、概要
 
-rocket-mq 版本：4.8.0
+`rocket-mq` 版本：`4.8.0`
 
 go客户端版本：`go get -u -v github.com/apache/rocketmq-client-go/v2@v2.0.0`
 
 rocker-mq 官方文档：[文档链接](https://github.com/apache/rocketmq/tree/release-4.8.0/docs/cn)
+
+学习文档：[文档链接](./doc)
 
 ## 2、特点
 
