@@ -155,7 +155,7 @@ bad3443fd2b7        rocket_mq_nameserver-02_1      0.30%               149.4MiB 
 4、查看总占用的内存情况(这个是6个docker容器的内存使用情况)
 
 ```shell
-➜  rocket_mq git:(m	aster) ✗ docker stats --no-stream | awk '{print $4}' | sed '1d' | awk '{a+=$1}END{printf "%sM\n",a}'
+➜  rocket_mq git:(master) ✗ docker stats --no-stream | awk '{print $4}' | sed '1d' | awk '{a+=$1}END{printf "%sM\n",a}'
 1676.9M
 ```
 
