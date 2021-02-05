@@ -106,7 +106,7 @@ RaftCluster       RaftNode00              3     172.15.64.10:10913     V4_8_0   
 
 官方文档：[https://github.com/apache/rocketmq/blob/master/docs/cn/operation.md](https://github.com/apache/rocketmq/blob/master/docs/cn/operation.md)
 
-其他文档：[集群模式](./集群/集群模式.md)
+其他文档：[集群模式](./doc/集群模式.md)
 
 ### 5、启动
 
