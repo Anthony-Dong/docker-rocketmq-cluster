@@ -4,6 +4,8 @@ rocket-mq 版本：4.8.0
 
 go客户端版本：`go get -u -v github.com/apache/rocketmq-client-go/v2@v2.0.0`
 
+rocker-mq 官方文档：[文档链接](https://github.com/apache/rocketmq/tree/release-4.8.0/docs/cn)
+
 ## 2、特点
 
 1、支持通过本地docker环境搭建rocket-mq 集群
@@ -16,7 +18,7 @@ go客户端版本：`go get -u -v github.com/apache/rocketmq-client-go/v2@v2.0.0
 
 1、rocketmq 的 shell脚本的问题，主要原因是 `rocketMQ`的启动脚本shell的不规范问题，可以看 [https://github.com/apache/rocketmq/issues/2655](https://github.com/apache/rocketmq/issues/2655) 
 
-2、启动时切记要修改JVM参数，不然本地三台集群启动起来瞬间爆炸，单台Broker内存启动为8G，可以通过环境变量`JAVA_OPT_EXT` 控制JVM启动参数
+2、启动时切记要修改JVM参数，不然本地集群启动起来瞬间爆炸，单台Broker内存启动为8G，可以通过环境变量`JAVA_OPT_EXT` 控制JVM启动参数，可能docker容器内存不足，直接被kill掉进程。
 
 ## 4、项目目录
 
@@ -68,13 +70,13 @@ dLegerSelfId=n0
 sendMessageThreadPoolNums=4
 ```
 
-全部配置可以看: [broker](./config/broker.md)
+全部配置可以看: [broker](./doc/broker)
 
 ### 2、nameserver 配置
 
 由于name-server 配置不是特别多，走默认配置即可（由于我们是单机器部署一个实例，所以不需要考虑环境冲突问题，也不推荐name-server和broker放在一台机器的做法）
 
-默认配置可以看：[name-server](./config/name-server.md)
+默认配置可以看：[name-server](./doc/nameserver)
 
 ### 3、`dLeger`模式部署
 
@@ -106,7 +108,7 @@ RaftCluster       RaftNode00              3     172.15.64.10:10913     V4_8_0   
 
 官方文档：[https://github.com/apache/rocketmq/blob/master/docs/cn/operation.md](https://github.com/apache/rocketmq/blob/master/docs/cn/operation.md)
 
-其他文档：[集群模式](./doc/集群模式.md)
+其他文档：[集群模式](./doc/cluster)
 
 ### 5、启动
 

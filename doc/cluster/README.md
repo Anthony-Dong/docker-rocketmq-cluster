@@ -1,5 +1,7 @@
 ## 一、RocketMQ 常用部署模式
 
+官方的部署模式：[https://github.com/apache/rocketmq/blob/release-4.8.0/docs/cn/best_practice.md](https://github.com/apache/rocketmq/blob/release-4.8.0/docs/cn/best_practice.md)
+
 RocketMQ 常用部署方案有以下几种：
 
 - **单机模式**
