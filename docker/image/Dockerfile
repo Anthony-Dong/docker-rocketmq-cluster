@@ -12,8 +12,8 @@ RUN wget https://archive.apache.org/dist/rocketmq/4.8.0/rocketmq-all-4.8.0-bin-r
 WORKDIR /opt/rocketmq
 
 ADD bin ./bin
-# RUN mkdir -p /opt/rocketmq/data/store \
-#     && mkdir -p /opt/rocketmq/data/commitlog
+RUN mkdir -p /root/store \
+    && mkdir -p /root/store/commitlog
 ENV PATH=${PATH}:/opt/rocketmq/bin
 
 EXPOSE 9876 10911

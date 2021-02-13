@@ -81,4 +81,49 @@ services:
       - JAVA_OPT_EXT=-Xms256m -Xmx256m
     ports: 
       - 10913:10913
-    command: mqbroker -c conf/broker.conf    
+    command: mqbroker -c conf/broker.conf
+  broker-04:
+    image: rocketmq:v4.8.0
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+    volumes:
+      - ./broker-04/store:/root/store
+      - ./broker-04/rocketmqlogs:/root/logs/rocketmqlogs
+      - ./broker-04/conf:/opt/rocketmq/conf
+    environment:
+      - JAVA_OPT_EXT=-Xms256m -Xmx256m
+    ports: 
+      - 10914:10914
+    command: mqbroker -c conf/broker.conf
+  broker-05:
+    image: rocketmq:v4.8.0
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+    volumes:
+      - ./broker-05/store:/root/store
+      - ./broker-05/rocketmqlogs:/root/logs/rocketmqlogs
+      - ./broker-05/conf:/opt/rocketmq/conf
+    environment:
+      - JAVA_OPT_EXT=-Xms256m -Xmx256m
+    ports: 
+      - 10915:10915
+    command: mqbroker -c conf/broker.conf
+  broker-06:
+    image: rocketmq:v4.8.0
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+    volumes:
+      - ./broker-06/store:/root/store
+      - ./broker-06/rocketmqlogs:/root/logs/rocketmqlogs
+      - ./broker-06/conf:/opt/rocketmq/conf
+    environment:
+      - JAVA_OPT_EXT=-Xms256m -Xmx256m
+    ports: 
+      - 10916:10916
+    command: mqbroker -c conf/broker.conf

@@ -1,12 +1,21 @@
 ## 1、概要
 
+> ​	使用`docker-image`+`docker-compose`搭建的本地rocket-mq集群环境，使用的是`2broker(6node)+2name-server`搭建的，同时还有学习rocket-mq的一些文章：[doc](./doc)
+
 `rocket-mq` 版本：`4.8.0`
 
-go客户端版本：`go get -u -v github.com/apache/rocketmq-client-go/v2@v2.0.0`
+`go-client`版本：`go get -u -v github.com/apache/rocketmq-client-go/v2@v2.0.0`
 
 rocker-mq 官方文档：[文档链接](https://github.com/apache/rocketmq/tree/release-4.8.0/docs/cn)
 
-学习文档：[文档链接](./doc)
+学习文档：
+
+- [源码环境搭建](./doc/源码环境搭建.md)
+- [CommitLog和ConsumerQueue和IndexFile源码分析](./doc./CommitLog和ConsumerQueue和IndexFile分析.md)
+- [broker学习](./doc/Broker学习.md)
+- [name-server学习](./doc/name-server学习.md)
+- [Rocket-MQ与Kafka的对比](./doc/rocket-mq与kafka之间的对比.md)
+- [各种集群模式的优缺点](./doc/各种集群模式的优缺点.md)
 
 ## 2、特点
 
@@ -21,6 +30,33 @@ rocker-mq 官方文档：[文档链接](https://github.com/apache/rocketmq/tree/
 1、rocketmq 的 shell脚本的问题，主要原因是 `rocketMQ`的启动脚本shell的不规范问题，可以看 [https://github.com/apache/rocketmq/issues/2655](https://github.com/apache/rocketmq/issues/2655) 
 
 2、启动时切记要修改JVM参数，不然本地集群启动起来瞬间爆炸，单台Broker内存启动为8G，可以通过环境变量`JAVA_OPT_EXT` 控制JVM启动参数，可能docker容器内存不足，直接被kill掉进程。
+
+3、切记电脑的总内存分配给Docker的不要过于小，下面是我机器的docker配置信息
+
+```shell
+➜  ~ docker info
+Containers: 55
+ Running: 0
+ Paused: 0
+ Stopped: 55
+Images: 323
+Server Version: 18.09.2
+## .......
+OSType: linux
+Architecture: x86_64
+CPUs: 4
+Total Memory: 5.818GiB
+Name: linuxkit-025000000001
+ID: 5JBH:7VOE:3R3W:6G4I:6NXD:AXGN:MI2Z:DNUI:7BZ5:KRT6:NC5T:AJGE
+Docker Root Dir: /var/lib/docker
+Debug Mode (client): false
+Debug Mode (server): true
+ File Descriptors: 24
+ Goroutines: 50
+ System Time: 2021-02-07T08:18:25.936909812Z
+ EventsListeners: 2
+## .......
+```
 
 ## 4、项目目录
 
@@ -162,4 +198,3 @@ bad3443fd2b7        rocket_mq_nameserver-02_1      0.30%               149.4MiB 
 ➜  rocket_mq git:(master) ✗ docker stats --no-stream | awk '{print $4}' | sed '1d' | awk '{a+=$1}END{printf "%sM\n",a}'
 1676.9M
 ```
-

@@ -9,6 +9,9 @@ clean:delete
 	$(RM) -r ./broker-01/store ./broker-01/rocketmqlogs \
 	./broker-02/store ./broker-02/rocketmqlogs \
 	./broker-03/store ./broker-03/rocketmqlogs \
+	./broker-04/store ./broker-04/rocketmqlogs \
+	./broker-05/store ./broker-05/rocketmqlogs \
+	./broker-06/store ./broker-06/rocketmqlogs \
 	./nameserver-01/rocketmqlogs \
 	./nameserver-02/rocketmqlogs
 down-rocketmq:
