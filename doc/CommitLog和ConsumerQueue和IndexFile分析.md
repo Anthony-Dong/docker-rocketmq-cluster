@@ -557,3 +557,165 @@ public boolean putKey(final String key, final long phyOffset, final long storeTi
 
 
 
+## 3、延时队列
+
+### 1、代码展示
+
+消息只需要：
+
+```go
+msg := &primitive.Message{
+  Topic: conf.Topic,
+  Body:  []byte(time.Now().Format("2006-01-02 15:04:05")),
+}
+msg = msg.WithDelayTimeLevel(3)
+```
+
+消费的信息
+
+```go
+err = con.Subscribe(conf.Topic, consumer.MessageSelector{}, func(ctx context.Context,
+  msgs ...*primitive.MessageExt) (consumer.ConsumeResult, error) {
+  for i := range msgs {
+    time.Sleep(time.Millisecond * 100)
+    fmt.Printf("subscribe callback: QueueId:%v, QueueOffset:%v, message:%s, store_host: %v, cur_time: %v\n", msgs[i].Queue.QueueId, msgs[i].QueueOffset, msgs[i].Body, msgs[i].StoreHost, common.NowTimeString())
+  }
+  return consumer.ConsumeSuccess, nil
+})
+```
+
+输出：基本可以保证level
+
+```shell
+subscribe callback: QueueId:0, QueueOffset:85, message:2021-02-13 16:10:15, store_host: 192.168.43.3:10916, cur_time: 2021-02-13 16:10:25
+subscribe callback: QueueId:0, QueueOffset:85, message:2021-02-13 16:10:16, store_host: 192.168.43.3:10913, cur_time: 2021-02-13 16:10:26
+```
+
+生产的文件
+
+```shell
+root@288c93824863:~/store/consumequeue/SCHEDULE_TOPIC_XXXX# pwd
+/root/store/consumequeue/SCHEDULE_TOPIC_XXXX
+root@288c93824863:~/store/consumequeue/SCHEDULE_TOPIC_XXXX# ls -l
+total 0
+drwxr-xr-x 3 root root 96 Feb 13 08:07 2
+```
+
+### 2、实现原理
+
+[https://cloud.tencent.com/developer/article/1581368](https://cloud.tencent.com/developer/article/1581368)
+
+具体就是创建一个临时的Topic的消费队列，然后定期去检测，如果到期，才要放到指定的topic中和消费队列中。(这块可以理解为，我额外创建了一个Topic叫做 `SCHEDULE_TOPIC_XXXX`，然后呢只要是延时消息我就放到这个topic中，然后呢我就消费这个Topic，这个是一个定时器定期去消费，如果发现触达，我就投递到真正的Topic中)
+
+细节就是，rocket-mq为了提高性能，并不支持任意的延时，因此它需要配置中指定延时队列的延时level: 其实就是提高读写性能
+
+```properties
+messageDelayLevel=1s 5s 10s 30s 1m 2m 3m 4m 5m 6m 7m 8m 9m 10m 20m 30m 1h 2h
+```
+
+这可以理解为增加的读写的队列.
+
+源码： 
+
+1、[消息投递](https://github.com/apache/rocketmq/blob/release-4.8.0/store/src/main/java/org/apache/rocketmq/store/CommitLog.java#L573)
+
+```java
+final int tranType = MessageSysFlag.getTransactionValue(msg.getSysFlag());
+if (tranType == MessageSysFlag.TRANSACTION_NOT_TYPE
+    || tranType == MessageSysFlag.TRANSACTION_COMMIT_TYPE) {
+    // Delay Delivery
+    if (msg.getDelayTimeLevel() > 0) {
+        if (msg.getDelayTimeLevel() > this.defaultMessageStore.getScheduleMessageService().getMaxDelayLevel()) {
+            msg.setDelayTimeLevel(this.defaultMessageStore.getScheduleMessageService().getMaxDelayLevel());
+        }
+
+        topic = TopicValidator.RMQ_SYS_SCHEDULE_TOPIC;
+        queueId = ScheduleMessageService.delayLevel2QueueId(msg.getDelayTimeLevel());
+
+        // Backup real topic, queueId
+        MessageAccessor.putProperty(msg, MessageConst.PROPERTY_REAL_TOPIC, msg.getTopic());
+        MessageAccessor.putProperty(msg, MessageConst.PROPERTY_REAL_QUEUE_ID, String.valueOf(msg.getQueueId()));
+        // Properties
+        msg.setPropertiesString(MessageDecoder.messageProperties2String(msg.getProperties()));
+
+        // topic
+        msg.setTopic(topic);
+
+        // 队列id
+        msg.setQueueId(queueId);
+    }
+}
+```
+
+2、[消息消费](https://github.com/apache/rocketmq/blob/release-4.8.0/store/src/main/java/org/apache/rocketmq/store/schedule/ScheduleMessageService.java#L262)
+
+```java
+for (; i < bufferCQ.getSize(); i += ConsumeQueue.CQ_STORE_UNIT_SIZE) {
+// 20bit
+// 消息的物理偏移量&&消息大小
+long offsetPy = bufferCQ.getByteBuffer().getLong();
+int sizePy = bufferCQ.getByteBuffer().getInt();
+long tagsCode = bufferCQ.getByteBuffer().getLong();
+
+if (cq.isExtAddr(tagsCode)) {
+    if (cq.getExt(tagsCode, cqExtUnit)) {
+        tagsCode = cqExtUnit.getTagsCode();
+    } else {
+        //can't find ext content.So re compute tags code.
+        log.error("[BUG] can't find consume queue extend file content!addr={}, offsetPy={}, sizePy={}",
+            tagsCode, offsetPy, sizePy);
+        long msgStoreTime = defaultMessageStore.getCommitLog().pickupStoreTimestamp(offsetPy, sizePy);
+        tagsCode = computeDeliverTimestamp(delayLevel, msgStoreTime);
+    }
+}
+
+long now = System.currentTimeMillis();
+long deliverTimestamp = this.correctDeliverTimestamp(now, tagsCode);
+
+nextOffset = offset + (i / ConsumeQueue.CQ_STORE_UNIT_SIZE);
+
+// 下发时间如果闭当前时间小，说明需要触达
+long countdown = deliverTimestamp - now;
+
+if (countdown <= 0) {
+    // 消费消息，消费的是 `SCHEDULE_TOPIC_XXXX`
+    MessageExt msgExt =
+        ScheduleMessageService.this.defaultMessageStore.lookMessageByOffset(
+            offsetPy, sizePy);
+
+    if (msgExt != null) {
+        try {
+            // 获取真实消息
+            MessageExtBrokerInner msgInner = this.messageTimeup(msgExt);
+            if (TopicValidator.RMQ_SYS_TRANS_HALF_TOPIC.equals(msgInner.getTopic())) {
+                log.error("[BUG] the real topic of schedule msg is {}, discard the msg. msg={}",
+                        msgInner.getTopic(), msgInner);
+                continue;
+            }
+            // 生产消息，落盘的commit-log中
+            PutMessageResult putMessageResult =
+                ScheduleMessageService.this.writeMessageStore
+                    .putMessage(msgInner);
+
+            if (putMessageResult != null
+                && putMessageResult.getPutMessageStatus() == PutMessageStatus.PUT_OK) {
+                continue;
+            } else {
+                // XXX: warn and notify me
+              // 注意如果失败会投递失败，需要看日志报警！！！
+                log.error(
+                    "ScheduleMessageService, a message time up, but reput it failed, topic: {} msgId {}",
+                    msgExt.getTopic(), msgExt.getMsgId());
+                ScheduleMessageService.this.timer.schedule(
+                    new DeliverDelayedMessageTimerTask(this.delayLevel,
+                        nextOffset), DELAY_FOR_A_PERIOD);
+                ScheduleMessageService.this.updateOffset(this.delayLevel,
+                    nextOffset);
+                return;
+            }
+        } catch (Exception e) {
+						//.......
+        }
+    }
+}
+```

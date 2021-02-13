@@ -158,7 +158,7 @@ time="2021-02-13T13:47:31+08:00" level=warning msg="[BUG] ConsumerId not in cidA
 
 ## 3、消费者/生产者相关
 
-1、查看消费客户端信息
+### 1、查看消费客户端信息
 
 ```shell
 root@f30df1853117:/opt/rocketmq# mqadmin consumerStatus -n "nameserver-01:9876;nameserver-02:9876"  -g go_client_dev
@@ -169,7 +169,7 @@ RocketMQLog:WARN Please initialize the logger system properly.
 003  192.168.43.3@5259                        V4_5_2               1613197331645/192.168.43.3@5259
 ```
 
-2、查看消费延迟
+### 2、查看消费积压
 
 1）可以看到消费队列是 4个，每个broker分别有两个
 
@@ -199,8 +199,6 @@ RocketMQLog:WARN Please initialize the logger system properly.
 RaftNode00                        0     0                     6311                    2021-02-13 06:27:30,408
 RaftNode01                        0     0                     6311                    2021-02-13 06:27:30,309
 ```
-
-
 
 ## 4、broker配置参数相关
 
