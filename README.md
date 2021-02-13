@@ -11,7 +11,7 @@ rocker-mq 官方文档：[文档链接](https://github.com/apache/rocketmq/tree/
 学习文档：
 
 - [源码环境搭建](./doc/源码环境搭建.md)
-- [CommitLog&&ConsumerQueue&&IndexFile&&延时队列源码分析](./doc./CommitLog和ConsumerQueue和IndexFile分析.md)
+- [CommitLog&&ConsumerQueue&&IndexFile&&延时队列源码分析](./doc/CommitLog和ConsumerQueue和IndexFile分析.md)
 - [broker学习](./doc/Broker学习.md)
 - [name-server学习](./doc/name-server学习.md)
 - [Rocket-MQ与Kafka的对比](./doc/rocket-mq与kafka之间的对比.md)
