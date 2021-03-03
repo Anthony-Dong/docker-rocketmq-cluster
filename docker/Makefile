@@ -1,6 +1,11 @@
 .PHONY: run stop delete clean down-rocketmq
+
 run:
 	docker-compose --compatibility up -d
+
+run-signle:
+	docker-compose --compatibility up -d nameserver-01 nameserver-02 rocketmq-console broker-01 broker-02 broker-03
+
 stop:
 	docker-compose --compatibility stop
 delete:

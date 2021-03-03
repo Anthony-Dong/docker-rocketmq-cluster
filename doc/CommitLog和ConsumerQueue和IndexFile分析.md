@@ -54,6 +54,7 @@ RaftNode00                        2     0                     14                
 RaftNode00                        3     0                     14                      2021-02-07 11:34:55,972
 ```
 
+文件命名是：`偏移量`
 
 ### 3、索引文件(`IndexFile`)
 
@@ -64,7 +65,11 @@ root@8dcb9a7a5a49:~/store/index# du -hs ./*
 20M	./20210207091126016
 ```
 
+文件名是根据：`存储的时间搓进行命名的`,
 
+```java
+String fileName =this.storePath + File.separator+ UtilAll.timeMillisToHumanString(System.currentTimeMillis());
+```
 
 ## 2、源码分析
 
@@ -425,6 +430,26 @@ this.byteBufferIndex.putLong(offset);// 偏移量
 this.byteBufferIndex.putInt(size); // 消息的大小
 this.byteBufferIndex.putLong(tagsCode); // 消息类型，MULTI_TAGS_FLAG||SINGLE_TAG
 ```
+
+#### 1、如何根据偏移量进行查询
+
+[org.apache.rocketmq.store.DefaultMessageStore#getMessage](https://github.com/apache/rocketmq/blob/release-4.8.0/store/src/main/java/org/apache/rocketmq/store/DefaultMessageStore.java#L555)
+
+1） 文件命名是以 `偏移量`进行命令的
+
+2）然后根据偏移量进行查询 指定的文件 （二分查询，[org.apache.rocketmq.store.MappedFileQueue#findMappedFileByOffset(long, boolean)](https://github.com/apache/rocketmq/blob/release-4.8.0/store/src/main/java/org/apache/rocketmq/store/MappedFileQueue.java#L462)）
+
+3）找到文件后，然后查询偏移量信息，根据偏移量*固定步长(consumer-queue 每个消息20字节) % 文件固定长度, 就可以找到文件的物理位置( [org.apache.rocketmq.store.ConsumeQueue#getIndexBuffer](https://github.com/apache/rocketmq/blob/release-4.8.0/store/src/main/java/org/apache/rocketmq/store/ConsumeQueue.java#L491))
+
+4）读取消息即可
+
+#### 2、如何根据时间进行查询
+
+具体逻辑在： [org.apache.rocketmq.store.DefaultMessageStore#getOffsetInQueueByTime](https://github.com/apache/rocketmq/blob/release-4.8.0/store/src/main/java/org/apache/rocketmq/store/DefaultMessageStore.java#L759)
+
+1、先根据文件的modify时间，选择文件(所以可以依靠文件的变更时间进行确认时间，这里有个问题就是：consumer-queue是异步写的，但是实际生产时间一定是小于写入时间，也就是说一定不会出现选错文件的问题）
+
+2、然后遍历即可，这个时间复杂程度较高
 
 ### 3、`IndexFile`核心实现
 
