@@ -67,6 +67,9 @@ Debug Mode (server): true
 ├── broker-01 ## 1broker，3节点
 ├── broker-02
 ├── broker-03
+├── broker-04 ## 2broker，3节点
+├── broker-05
+├── broker-06
 ├── docker-compose.yml # docker-compose 启动脚本
 ├── image # rocket-mq的本地镜像搭建
 ├── nameserver-01 ## name-server两个节点
@@ -77,7 +80,21 @@ Debug Mode (server): true
 
 ## 5、启动
 
-### 1、broker 配置
+### 1、帮助
+进去 `docker`目录, 执行make help命令
+
+```shell
+➜  docker git:(master) ✗ make help
+ image                 初始化镜像
+ run                   启动docker集群容器,默认是2broker(6node,2m4s),2nameserver,1manager
+ run-signle            启动docker集群容器,默认是1broker(3node,1m2s),2nameserver,1manager
+ stop                  关闭容器
+ delete                删除容器
+ down-rocketmq         下载rocketmq
+ config                配置docker容器内rocket-mq的IP地址可以使得宿主机服务可以访问到 
+ help                  帮助
+```
+### 2、broker 配置
 
 以Broker-01来说，配置文件在 `broker-01/conf/broker.conf`，所以启动参数为`mqbroker -c conf/broker.conf`，切记至少一个broker需要有三个节点，**如果broker两个节点的话如果down掉一个broker无法使用，现象是无法选举出新的master** , `DLeger`的好处是能够和`kafka`一样自动选择leader，不需要手动指定`brokerId=0`为master。
 
@@ -110,13 +127,13 @@ sendMessageThreadPoolNums=4
 
 全部配置可以看: [broker](./doc/broker)
 
-### 2、nameserver 配置
+### 3、nameserver 配置
 
 由于name-server 配置不是特别多，走默认配置即可（由于我们是单机器部署一个实例，所以不需要考虑环境冲突问题，也不推荐name-server和broker放在一台机器的做法）
 
 默认配置可以看：[name-server](./doc/nameserver)
 
-### 3、`dLeger`模式部署
+### 4、`dLeger`模式部署
 
 本文采用的是 `dLeger`模式，具体的模式好坏可以看 ,[https://github.com/apache/rocketmq/blob/release-4.8.0/docs/cn/operation.md](https://github.com/apache/rocketmq/blob/release-4.8.0/docs/cn/operation.md) , 如果要高可用，必须要求每个broker至少有三台节点（由它的选举机制决定），具体down机模拟看后面
 
@@ -142,13 +159,13 @@ RaftCluster       RaftNode00              3     172.15.64.10:10913     V4_8_0   
 
 ![image-20210205144906904](https://tyut.oss-accelerate.aliyuncs.com/image/2021/2-5/9232ec4fc66c4d01bd615a7d78cfe371.png)
 
-### 4、其他部署模式的优缺点
+### 5、其他部署模式的优缺点
 
 官方文档：[https://github.com/apache/rocketmq/blob/master/docs/cn/operation.md](https://github.com/apache/rocketmq/blob/master/docs/cn/operation.md)
 
 其他文档：[集群模式](./doc/cluster)
 
-### 5、启动
+### 6、启动
 
 1、进入到 [docker目录](./docker) ，然后进入到 [镜像目录](./docker/image)执行`make` 即可
 
