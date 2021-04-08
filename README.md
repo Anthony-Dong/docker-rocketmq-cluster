@@ -84,14 +84,15 @@ Debug Mode (server): true
 进去 `docker`目录, 执行make help命令
 
 ```shell
-➜  docker git:(master) ✗ make help
+➜  docker git:(master) ✗ make help 
  image                 初始化镜像
  run                   启动docker集群容器,默认是2broker(6node,2m4s),2nameserver,1manager
  run-signle            启动docker集群容器,默认是1broker(3node,1m2s),2nameserver,1manager
  stop                  关闭容器
  delete                删除容器
+ clean                 清除本地volume的文件和容器
  down-rocketmq         下载rocketmq
- config                配置docker容器内rocket-mq的IP地址可以使得宿主机服务可以访问到 
+ config                配置docker容器内rocket-mq的IP地址可以使得宿主机服务可以访问到
  help                  帮助
 ```
 ### 2、broker 配置

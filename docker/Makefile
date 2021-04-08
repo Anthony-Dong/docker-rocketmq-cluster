@@ -22,7 +22,7 @@ stop: ## 关闭容器
 delete: ## 删除容器
 	docker-compose --compatibility down
 
-clean:delete ##清楚本地文件(flush)
+clean:delete ## 清除本地volume的文件和容器
 	$(RM) -r ./broker-01/store ./broker-01/rocketmqlogs \
 	./broker-02/store ./broker-02/rocketmqlogs \
 	./broker-03/store ./broker-03/rocketmqlogs \
