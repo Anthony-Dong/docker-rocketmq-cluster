@@ -107,7 +107,7 @@ brokerClusterName = RaftCluster
 brokerName=RaftNode00
 # 如果采用dLeger模式搭建，默认为-1，所以不配置
 # brokerId=-1
-# 本地网卡IP，（如果是内网可以不设置这个，由于我们需要本地测试需要写你的本机eth0的网卡，切记要修改）
+# 本地网卡IP，如果是内网可以不设置这个，由于我们需要在宿主机测试，需要修改这个ip(宿主机物理网卡的IP)，这里执行make config 即可
 brokerIP1=192.168.1.4
 # 默认监听10911端口
 listenPort=10911
